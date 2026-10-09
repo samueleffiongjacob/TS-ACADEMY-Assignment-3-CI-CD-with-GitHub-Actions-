@@ -1,0 +1,10 @@
+# Run the app locally with Docker Compose:
+#   docker compose run --rm app help
+#   docker compose run --rm app system-info
+#   docker compose run --rm app check-port localhost 80
+services:
+  app:
+    build: .
+    image: devops-tool
+    read_only: true
+    command: ["help"]

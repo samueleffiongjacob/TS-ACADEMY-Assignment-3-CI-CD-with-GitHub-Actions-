@@ -1,0 +1,35 @@
+# CI pipeline:  validate  ->  test  ->  docker
+# Each job starts only when the previous one has succeeded (needs:).
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint (required files, bash -n, ShellCheck)
+        run: ./scripts/lint.sh
+
+  test:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run test suite
+        run: ./tests/test.sh
+
+  docker:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image and run smoke tests
+        run: ./scripts/build.sh
