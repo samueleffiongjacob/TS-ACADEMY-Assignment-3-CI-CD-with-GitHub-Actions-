@@ -3,6 +3,7 @@
 # tests/test.sh - Automated tests for app/app.sh (no Docker needed).
 # Each test runs the app, then checks the exit code and (optionally) the output.
 # Exit: 0 = all tests passed, 1 = at least one failed
+### and am done
 # =============================================================================
 
 set -u
