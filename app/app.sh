@@ -16,7 +16,7 @@
 
 set -u
 
-readonly EXIT_OK=0
+# readonly EXIT_OK=0
 readonly EXIT_FAIL=1
 readonly EXIT_USAGE=2
 

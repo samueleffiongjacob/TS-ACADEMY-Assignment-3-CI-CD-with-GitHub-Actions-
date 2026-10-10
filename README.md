@@ -1,4 +1,4 @@
-# Assignment 3 — CI/CD with GitHub Actions
+# Assignment 3- CI/CD with GitHub Actions
 
 A small Bash application with automated linting, tests and a Docker
 build/smoke-test, wired into a three-stage GitHub Actions pipeline.
