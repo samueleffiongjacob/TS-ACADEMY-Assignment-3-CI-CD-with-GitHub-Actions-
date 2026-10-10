@@ -5,6 +5,7 @@
 #   2. `bash -n` (syntax check) passes for every Bash script
 #   3. ShellCheck runs too, if it is installed (optional extra)
 # Exit: 0 = clean, 1 = a problem was found
+# #######
 # =============================================================================
 
 set -u

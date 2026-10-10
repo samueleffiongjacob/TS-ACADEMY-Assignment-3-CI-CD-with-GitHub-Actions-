@@ -113,7 +113,3 @@ git checkout main && git merge demo/ci-failure && git push
 - ShellCheck is optional locally (it is preinstalled on GitHub's Ubuntu runners).
 - Exit code `1` is used for a failed check on valid input, `2` for invalid input.
 - No secrets, tokens or machine-specific paths are committed.
-
-## Git workflow
-
-Developed on feature branches with small commits, then merged into `main`.

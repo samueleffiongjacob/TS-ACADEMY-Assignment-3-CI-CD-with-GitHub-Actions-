@@ -7,6 +7,7 @@
 #   system-info     -> must exit 0
 #   invalid command -> must exit 2 (proves error handling works in the image)
 # Exit: 0 = built and all smoke tests passed, 1 = failure, 2 = Docker missing
+# the image name can be overridden by setting the IMAGE environment variable.
 # =============================================================================
 
 set -u

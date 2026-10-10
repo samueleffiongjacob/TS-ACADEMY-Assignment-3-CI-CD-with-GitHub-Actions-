@@ -1,5 +1,6 @@
 # CI pipeline:  validate  ->  test  ->  docker
 # Each job starts only when the previous one has succeeded (needs:).
+# NOTE it take atleast 30 sconds to complete github actions
 name: CI
 
 on:
